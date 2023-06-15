@@ -70,7 +70,7 @@ onMounted(() => {
 </script>
 <template>
   <div
-    class="flex min-h-full items-center justify-center px-4 py-12 sm:px-6 lg:px-8 bg-[url('@/assets/images/bg-login.jpg')] h-screen"
+    class="flex min-h-full items-center justify-center px-4 py-12 sm:px-6 lg:px-8 bg-[url('@/assets/images/bg-login.webp')] h-screen"
   >
     <div class="bg-slate-100 space-y-8 p-10 md:-mt-16 rounded-lg">
       <div>
