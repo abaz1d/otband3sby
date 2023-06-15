@@ -76,7 +76,8 @@ onMounted(() => {
       <div>
         <img class="mx-auto h-28 w-auto" src="@/assets/images/logo512.png" alt="Your Company" />
         <h1 class="mt-4 text-center text-xl font-bold tracking-tight text-gray-900 uppercase">
-          Kantor Otoritas Bandara Wilayah III
+          Kantor Otoritas Bandar Udara Wilayah III <br />
+          Kota Surabaya
         </h1>
       </div>
       <form class="mt-8 space-y-6" action="#" method="POST">

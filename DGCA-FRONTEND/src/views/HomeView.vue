@@ -16,7 +16,7 @@ import { RouterLink } from 'vue-router'
           </div>
         </div>
         <div class="w-2/12 lg:w-1/12 flex border-l items-center justify-center text-primary">
-          <ChevronRightIcon class="group-hover:scale-125" />
+          <!-- <ChevronRightIcon class="group-hover:scale-125" /> -->
         </div>
       </div>
     </RouterLink>

@@ -22,20 +22,20 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/menu',
-    name: 'menu',
-    component: MainMenu
-  },
-  {
-    path: '/ramp-inspection',
-    name: 'ramp-inspection',
     component: RampInspection
   },
+  // {
+  //   path: '/menu',
+  //   name: 'menu',
+  //   component: MainMenu
+  // },
+  // {
+  //   path: '/ramp-inspection',
+  //   name: 'ramp-inspection',
+  //   component: RampInspection
+  // },
   {
-    path: '/ramp-inspection/:id',
+    path: '/:id',
     name: 'detail-ramp-inspection',
     component: DetailRI
   },
@@ -49,46 +49,46 @@ const routes = [
     name: 'maintenance-facility',
     component: MaintenanceFacilities
   },
-  {
-    path: '/maintenance-facility/:id',
-    name: 'detail-maintenance-facility',
-    component: DetailMFA
-  },
-  {
-    path: '/print-maintenance-facility/:id',
-    name: 'print-maintenance-facility',
-    component: printMFA
-  },
-  {
-    path: '/maintenance-personnel',
-    name: 'maintenance-personnel',
-    component: MaintenancePersonnel
-  },
-  {
-    path: '/maintenance-personnel/:id',
-    name: 'detail-maintenance-personnel',
-    component: DetailMPE
-  },
-  {
-    path: '/print-maintenance-personnel/:id',
-    name: 'print-maintenance-personnel',
-    component: printMPE
-  },
-  {
-    path: '/maintenance-publications',
-    name: 'maintenance-publications',
-    component: MaintenancePublications
-  },
-  {
-    path: '/maintenance-publications/:id',
-    name: 'detail-maintenance-publications',
-    component: DetailMPU
-  },
-  {
-    path: '/print-maintenance-publications/:id',
-    name: 'print-maintenance-publications',
-    component: printMPU
-  },
+  // {
+  //   path: '/maintenance-facility/:id',
+  //   name: 'detail-maintenance-facility',
+  //   component: DetailMFA
+  // },
+  // {
+  //   path: '/print-maintenance-facility/:id',
+  //   name: 'print-maintenance-facility',
+  //   component: printMFA
+  // },
+  // {
+  //   path: '/maintenance-personnel',
+  //   name: 'maintenance-personnel',
+  //   component: MaintenancePersonnel
+  // },
+  // {
+  //   path: '/maintenance-personnel/:id',
+  //   name: 'detail-maintenance-personnel',
+  //   component: DetailMPE
+  // },
+  // {
+  //   path: '/print-maintenance-personnel/:id',
+  //   name: 'print-maintenance-personnel',
+  //   component: printMPE
+  // },
+  // {
+  //   path: '/maintenance-publications',
+  //   name: 'maintenance-publications',
+  //   component: MaintenancePublications
+  // },
+  // {
+  //   path: '/maintenance-publications/:id',
+  //   name: 'detail-maintenance-publications',
+  //   component: DetailMPU
+  // },
+  // {
+  //   path: '/print-maintenance-publications/:id',
+  //   name: 'print-maintenance-publications',
+  //   component: printMPU
+  // },
   {
     path: '/users',
     name: 'users',

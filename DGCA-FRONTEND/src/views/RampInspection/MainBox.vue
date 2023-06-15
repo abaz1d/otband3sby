@@ -10,7 +10,7 @@ const Auth = useAuthStore()
 const user = ref('')
 const router = useRouter()
 const search_data = ref('')
-const search_type = ref('id_ri')
+const search_type = ref("data_utama ->> '_4'")
 const page_number = ref(1)
 const total_pages = ref(0)
 const row_per_page = ref(50)
@@ -24,7 +24,7 @@ const addGet = async () => {
     if (user.value.role == 'admin') {
       isLoading.value = true
       const data = await RI.addGet()
-      router.push(`ramp-inspection/${data.id_ri}?isAdd=true`)
+      router.push(`/${data.id_ri}?isAdd=true`)
     }
     isLoading.value = false
   } catch (error) {
@@ -137,11 +137,11 @@ onMounted(async () => {
 </script>
 <template>
   <div class="flex mb-5 lg:mb-10 p-5 lg:px-48 bg-white">
-    <RouterLink to="/" class="flex items-center cursor-pointer group float-left">
+    <!-- <RouterLink to="/" class="flex items-center cursor-pointer group float-left">
       <ArrowLeftIcon
         class="transition duration-500 ease-in-out group-hover:scale-150 float-left hover:text-primary"
       />
-    </RouterLink>
+    </RouterLink> -->
     <div class="w-full flex items-center justify-center text-center mx-4">
       <a href="" aria-describedby="title" class="text-base lg:text-xl font-black">
         RAMP INSPECTION CHECKLIST
@@ -203,9 +203,10 @@ onMounted(async () => {
                     v-model="search_type"
                     class="inline align-middle text-center select-none border w-14 font-normal whitespace-no-wrap rounded-r-lg no-underline h-9 mx-auto px-0 leading-tight text-sm bg-gray-100 text-gray-800 hover:bg-gray-200 btn-light-bordered"
                   >
-                    <option value="id_ri">ID</option>
-                    <option value="company_name">Company Name</option>
-                    <option value="certificate_number">Certificate Number</option>
+                    <option value="data_utama ->> '_4'">Operator</option>
+                    <option value="data_utama ->> '_1_2'">Date</option>
+                    <!-- <option value="_4">Operator</option>
+                    <option value="_1_2">Date</option> -->
                   </select>
                 </div>
               </div>
@@ -300,7 +301,7 @@ onMounted(async () => {
           >
             <div class="flex justify-center">
               <RouterLink
-                :to="`ramp-inspection/${item.id_ri}?isEdit=true`"
+                :to="`/${item.id_ri}?isEdit=true`"
                 class="flex items-center mr-3 p-2 rounded-md border border-white hover:border-success hover:bg-white hover:text-green-700 text-success"
               >
                 <CheckSquareIcon class="w-3 h-3 mr-1" /> Edit
@@ -317,7 +318,7 @@ onMounted(async () => {
         </div>
       </div>
       <RouterLink
-        :to="`ramp-inspection/${item.id_ri}`"
+        :to="`/${item.id_ri}`"
         class="w-2/12 lg:w-1/12 flex border-l items-center justify-center hover:bg-gray-400 text-primary cursor-pointer"
       >
         <ChevronRightIcon class="group-hover:scale-150" />

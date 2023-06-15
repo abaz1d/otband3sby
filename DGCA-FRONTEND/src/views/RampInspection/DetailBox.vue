@@ -140,7 +140,7 @@ const saveData = () => {
         isLoading.value = true
         RI.saveItem(id_ri, data_utama.value).then(() => {
           resetForm()
-          router.push('/ramp-inspection')
+          router.push('/')
           isLoading.value = false
         })
       }
@@ -293,7 +293,7 @@ onMounted(async () => {
 </script>
 <template>
   <div class="flex mb-10 p-5 lg:px-48 bg-white">
-    <RouterLink to="/ramp-inspection" class="flex items-center cursor-pointer group float-left">
+    <RouterLink to="/" class="flex items-center cursor-pointer group float-left">
       <ArrowLeftIcon
         class="transition duration-500 ease-in-out group-hover:scale-150 float-left hover:text-primary"
       />

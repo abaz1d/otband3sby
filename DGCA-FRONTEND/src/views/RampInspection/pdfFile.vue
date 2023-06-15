@@ -8,31 +8,6 @@ const route = useRoute()
 const router = useRouter()
 const RI = useRIStore()
 
-const date = ref(moment(Date.now()).format('YYYY-MM-DD HH:mm'))
-const company_name = ref()
-const certificate_number = ref()
-const certification = ref(false)
-const surveillance = ref(false)
-
-const checklist = ref({
-  _1: { sat: false, unsat: false, na: false },
-  _2: { sat: false, unsat: false, na: false },
-  _3: { sat: false, unsat: false, na: false },
-  _4: { sat: false, unsat: false, na: false },
-  _5: { sat: false, unsat: false, na: false },
-  _6: { sat: false, unsat: false, na: false },
-  _7: { sat: false, unsat: false, na: false },
-  _8: { sat: false, unsat: false, na: false },
-  _9: { sat: false, unsat: false, na: false },
-  _10: { sat: false, unsat: false, na: false },
-  _11: { sat: false, unsat: false, na: false },
-  _12: { sat: false, unsat: false, na: false },
-  _13: { sat: false, unsat: false, na: false },
-  _14: { sat: false, unsat: false, na: false },
-  _15: { sat: false, unsat: false, na: false },
-  _16: { sat: false, unsat: false, na: false },
-  _17: { sat: false, unsat: false, na: false }
-})
 const data_utama = ref({
   _1_2: `${moment(Date.now()).format('YYYY-MM-DD HH:mm')}`,
   _3: '', //place
@@ -151,18 +126,11 @@ const data_utama = ref({
   },
   _24: ''
 })
-const remark = ref('')
-const inspector = ref({
-  _1: { name: '', signature: false },
-  _2: { name: '', signature: false },
-  _3: { name: '', signature: false },
-  _4: { name: '', signature: false }
-})
 
 onMounted(async () => {
   try {
     document.title =
-      'RAMP INSPECTION CHECKLIST' + '' + `${moment(Date.now()).format('DD MMM YYYY HH:SS')}`
+      'RAMP INSPECTION CHECKLIST' + ' ' + `${moment(Date.now()).format('DD MMM YYYY HH:SS')}`
 
     const data = await RI.readDetail(route.params.id)
     data_utama.value = data[0].data_utama
